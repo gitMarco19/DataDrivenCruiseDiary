@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Data Visualization - Progetto</title>
+		<script src = "https://d3js.org/d3.v5.min.js"></script>
+		<script src = "https://d3js.org/topojson.v3.min.js"></script>
+		<link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		<link rel = "stylesheet" href="style.css?version=1">
+	</head>
+	<body>
+		<div id = "titolo">
+			<img id = "logo" src="immagini/perini_logo.png" alt = "Perini Navi">
+			<br>
+			<img id = "play" src = "immagini/play.png" alt = "Play">
+		</div>
+		<div class = "row margin">
+			<div class = "col-sm-3">
+				<div>
+					<svg id = "svgMap" width = "400" height = "550">
+						<g id = "map"></g>
+					</svg>
+				</div>
+				<div id = "box">
+					<h6 id = "info0">More info</h6>
+					<h6 id = "info1">Distance</h6>
+					<h6 id = "info2">Ship speed</h6>
+					<h6 id = "info3">Air temperature</h6>
+					<h6 id = "info4">Water temperature</h6>
+					<h6 id = "info5">Humidity</h6>
+					<h6 id = "info6">Pressure</h6>
+					<h6 id = "info7">Wind speed</h6>
+					<h6 id = "info8">Wind direction</h6>
+					<h6 id = "info9">UV index</h6>
+				</div>
+			</div>
+			<div class = "col-sm-9 padding">
+				<div>
+					<div class = "left">
+						<h5>Distance Traveled [m]</h5>
+						<svg id = "distance" class = "focus" width = "600" height = "185"></svg>
+					</div>
+					<div>
+						<h5>Ship Speed [knots]</h5>
+						<svg id = "ship_speed" class = "focus" width = "600" height = "185"></svg>
+					</div>
+				</div>
+				<div>
+					<div class = "left">
+						<h5>Air Temperature [°C]</h5>
+						<svg id = "temperatura" class = "focus" width = "600" height = "185"></svg>
+					</div>
+					<div>
+						<h5>Water Temperature [°C]</h5>
+						<svg id = "water" class = "focus" width = "600" height = "185"></svg>
+					</div>
+				</div>
+				<div>
+					<div class = "left">
+						<h5>Humidity [%]</h5>
+						<svg id = "humidity" class = "focus" width = "600" height = "185"></svg>
+					</div>
+					<div>
+						<h5>Pressure [hPa]</h5>
+						<svg id = "pressure" class = "focus" width = "600" height = "185"></svg>
+					</div>
+				</div>
+				<div>
+					<div class = "left">
+						<div id = "plot-selector">
+			                <h5>Wind Speed [knots]: </h5>
+			                <select id = "dataset" onchange = "drawLineWind(this.options[this.selectedIndex].value, false)">
+			                    <option selected value = "computedWind">Computed Wind</option>
+			                    <option value = "appWind">Apparence Wind</option>
+			                </select>
+            			</div>
+						<svg id = "wind_speed" class = "focus" width = "600" height = "185"></svg>
+					</div>
+					<div>
+						<h5>UV Index</h5>
+						<svg id = "uv_index" class = "focus" width = "600" height = "185"></svg>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="script.js?version=1"></script>
+	</body>
+</html>
