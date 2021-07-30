@@ -7,9 +7,9 @@ The aim is to build a narrative tool that tells the story of a sea cruise using 
 The challenge is trying to do something that is aesthetically pleasing and strives toward the goal of unfolding a narrative story through the data.
 Right now, the project has been realized using a mockup dataset, because the system for collecting data from the ship is not yet live and running. 
 
-*Data*: a csv file containing time series data for the provided variables.
+***Data***: a csv file containing time series data for the provided variables. Have a look into the *"dati"* directory for a more detailed description.
 
-*Vis scope*: time series
+***Vis scope***: time series.
 
 ## User manual
 So that everything work correctly, the project must be executed on a localhost server. <br>
@@ -28,3 +28,4 @@ Optional integration with additional external data. <br>
 For example:
 - Weather data from external stations.
 - Astronomical data (sunset/sunrise, sun height during the day, moon rising/setting and phases).
+- Cruise passengers biometric data.
